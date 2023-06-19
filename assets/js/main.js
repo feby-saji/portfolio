@@ -45,12 +45,27 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2000,
-    delay: 200,
+    duration: 1000,
+    delay: 100,
 //     reset: true
 });
 
+// submit form
+function validateForm(form){
+    let name = document.querySelector('.class_name').value;
+    let email = document.querySelector('.class_email').value;
+    let content = document.querySelector('.class_content').value;
+
+    if(name&& email && content){
+        alert("form submission successfull");
+        form.submit;
+    }else{
+        alert("every field must be filled");
+        return false;
+    }
+}
+
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 200}); 
+sr.reveal('.home__social-icon',{ interval: 100}); 
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 100}); 
