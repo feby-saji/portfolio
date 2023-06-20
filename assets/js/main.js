@@ -50,20 +50,7 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-// submit form
-function validateForm(form){
-    let name = document.querySelector('.class_name').value;
-    let email = document.querySelector('.class_email').value;
-    let content = document.querySelector('.class_content').value;
 
-    if(name&& email && content){
-        alert("form submission successfull");
-        form.submit;
-    }else{
-        alert("every field must be filled");
-        return false;
-    }
-}
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 200}); 

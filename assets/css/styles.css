@@ -32,7 +32,7 @@
   :root {
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
-    --normal-font-size: 1rem;
+    home__blob --normal-font-size: 1rem;
     --smaller-font-size: .875rem;
   }
 
@@ -242,10 +242,12 @@ img {
 }
 
 .home__blob {
+
   fill: var(--first-color);
 }
 
 .home__blob-img {
+
   width: 500px;
 }
 
@@ -342,7 +344,8 @@ img {
   width: 65%;
 }
 
-.skills__ux   width: 85%;
+.skills__ux {
+  width: 85%;
 }
 
 .skills__img {
@@ -352,6 +355,11 @@ img {
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
+}
+
+.services_container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .work__img {
@@ -491,6 +499,11 @@ img {
   body {
     margin: 0;
   }
+
+  .services_container {
+    text-align: center;
+  }
+
 
   .section {
     padding-top: 4rem;
