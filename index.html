@@ -31,6 +31,7 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -196,13 +197,13 @@
             <div class="contact__container bd-grid">
                 <form action="" id="contact__form" class="contact__form">
                     <label for="name">name</label>
-                    <input type="text" name="name" placeholder="Name" class="contact__input class_name name">
+                    <input required type="text" name="name" placeholder="Name" class="contact__input class_name name">
 
                     <label for="email">Email</label>
-                    <input type="mail" name="email" placeholder="Email" class="contact__input class_email email">
+                    <input required type="mail" name="email" placeholder="Email" class="contact__input class_email email">
 
                     <label for="content">content</label>
-                    <textarea name="message" id="content" cols="0" rows="10"
+                    <textarea placeholder="message (optional)" name="message" id="content" cols="0" rows="10"
                         class="contact__input class_content"></textarea>
 
                     <input type="submit" value="submit" class="contact__button button">
@@ -216,9 +217,9 @@
         <p class="footer__title">Feby</p>
         <div class="footer__social">
 
-            <a href="https://discordapp.com/users/0541" class="footer__icon"><i class='bx bxl-discord'></i></a>
-            <a href="https://www.behance.net/febysaji1" class="footer__icon"><i class='bx bxl-behance'></i></a>
-            <a href="https://github.com/unrealt3n" class="footer__icon"><i class='bx bxl-github'></i></a>
+            <a  target="_blank" href="https://discordapp.com/users/0541" class="footer__icon"><i class='bx bxl-discord'></i></a>
+            <a  target="_blank" href="https://www.behance.net/febysaji1" class="footer__icon"><i class='bx bxl-behance'></i></a>
+            <a  href="https://github.com/unrealt3n"  class="footer__icon" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
         <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
     </footer>
@@ -227,16 +228,18 @@
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    /*==================== FORM VALIDATION ====================*/
     <script>
-        /*==================== FORM VALIDATION ====================*/
-
         $("#contact__form").submit((e) => {
             e.preventDefault();
             let name = document.querySelector('.class_name').value;
             let mail = document.querySelector('.class_email').value;
-            let message = document.querySelector('.class_content').value;
-            if (name && mail && message) {
-                if (mail.includes("@" && ".com")) {
+            // let message = document.querySelector('.class_content').value;
+        let regex =  /^[a-zA-Z ]{2,30}$/;
+            if(regex.test(name)){
+
+                
+                if (mail.includes("@" && ".")) {
                     $.ajax({
                         url: "https://script.google.com/macros/s/AKfycbxIZbe5enHDRnb2iQmV9j1CLWx5N0hRinKwgarc0WKF0Ld8spIjxEksQw85__EWymnZ0w/exec",
                         data: $("#contact__form").serialize(),
@@ -253,9 +256,10 @@
                 } else {
                     alert("Please enter a valid email");
                 }
-            } else {
-                alert("All fields are required!");
+            }else{
+                alert("Please enter a valid name");
             }
+            
         });
 
     </script>

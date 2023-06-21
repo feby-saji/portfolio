@@ -32,7 +32,7 @@
   :root {
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
-    home__blob --normal-font-size: 1rem;
+    --normal-font-size: 1rem;
     --smaller-font-size: .875rem;
   }
 
