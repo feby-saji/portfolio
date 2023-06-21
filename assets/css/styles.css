@@ -132,9 +132,7 @@ img {
   font-weight: var(--font-semi);
 }
 
-.contact__container label {
-  display: none;
-}
+
 
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -425,10 +423,6 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-.contact__container label {
-  display: none;
-}
-
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
@@ -490,9 +484,7 @@ img {
     justify-items: center;
   }
 
-  .contact__container label {
-    display: none;
-  }
+
 }
 
 @media screen and (min-width: 768px) {
